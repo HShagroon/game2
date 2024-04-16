@@ -15,6 +15,9 @@
 		6BE2A3DA2BAB8B03006DD7F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BE2A3D82BAB8B03006DD7F7 /* Main.storyboard */; };
 		6BE2A3DC2BAB8B04006DD7F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6BE2A3DB2BAB8B04006DD7F7 /* Assets.xcassets */; };
 		6BE2A3DF2BAB8B04006DD7F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BE2A3DD2BAB8B04006DD7F7 /* LaunchScreen.storyboard */; };
+		6BE2A3E62BAC5D4D006DD7F7 /* MyParticleRain.sks in Resources */ = {isa = PBXBuildFile; fileRef = 6BE2A3E52BAC5D4D006DD7F7 /* MyParticleRain.sks */; };
+		6BE2A3E82BB22D60006DD7F7 /* Maze.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE2A3E72BB22D60006DD7F7 /* Maze.swift */; };
+		6BE2A3EA2BB22DB3006DD7F7 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BE2A3E92BB22DB3006DD7F7 /* Stack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +30,9 @@
 		6BE2A3D92BAB8B03006DD7F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6BE2A3DB2BAB8B04006DD7F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6BE2A3DE2BAB8B04006DD7F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6BE2A3E52BAC5D4D006DD7F7 /* MyParticleRain.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MyParticleRain.sks; sourceTree = "<group>"; };
+		6BE2A3E72BB22D60006DD7F7 /* Maze.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Maze.swift; sourceTree = "<group>"; };
+		6BE2A3E92BB22DB3006DD7F7 /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +49,8 @@
 		6BE2A3C22BAB8B02006DD7F7 = {
 			isa = PBXGroup;
 			children = (
+				6BE2A3E92BB22DB3006DD7F7 /* Stack.swift */,
+				6BE2A3E72BB22D60006DD7F7 /* Maze.swift */,
 				6BE2A3CD2BAB8B02006DD7F7 /* game2 */,
 				6BE2A3CC2BAB8B02006DD7F7 /* Products */,
 			);
@@ -61,6 +69,7 @@
 			children = (
 				6BE2A3CE2BAB8B02006DD7F7 /* AppDelegate.swift */,
 				6BE2A3D02BAB8B03006DD7F7 /* GameScene.sks */,
+				6BE2A3E52BAC5D4D006DD7F7 /* MyParticleRain.sks */,
 				6BE2A3D22BAB8B03006DD7F7 /* Actions.sks */,
 				6BE2A3D42BAB8B03006DD7F7 /* GameScene.swift */,
 				6BE2A3D62BAB8B03006DD7F7 /* GameViewController.swift */,
@@ -130,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6BE2A3DA2BAB8B03006DD7F7 /* Main.storyboard in Resources */,
+				6BE2A3E62BAC5D4D006DD7F7 /* MyParticleRain.sks in Resources */,
 				6BE2A3D12BAB8B03006DD7F7 /* GameScene.sks in Resources */,
 				6BE2A3DC2BAB8B04006DD7F7 /* Assets.xcassets in Resources */,
 				6BE2A3DF2BAB8B04006DD7F7 /* LaunchScreen.storyboard in Resources */,
@@ -145,7 +155,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6BE2A3D52BAB8B03006DD7F7 /* GameScene.swift in Sources */,
+				6BE2A3EA2BB22DB3006DD7F7 /* Stack.swift in Sources */,
 				6BE2A3D72BAB8B03006DD7F7 /* GameViewController.swift in Sources */,
+				6BE2A3E82BB22D60006DD7F7 /* Maze.swift in Sources */,
 				6BE2A3CF2BAB8B02006DD7F7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -299,6 +311,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.adventure-games";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -326,6 +339,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.adventure-games";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

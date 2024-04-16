@@ -7,30 +7,45 @@
 
 import UIKit
 import SpriteKit
-import GameplayKit
 
 class GameViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if let view = self.view as! SKView? {
-            // Load the SKScene from 'GameScene.sks'
-            if let scene = SKScene(fileNamed: "GameScene") {
-                // Set the scale mode to scale to fit the window
-                scene.scaleMode = .aspectFill
-                
-                // Present the scene
-                view.presentScene(scene)
-            }
-            
-            view.ignoresSiblingOrder = true
-            
-            view.showsFPS = true
-            view.showsNodeCount = true
+        // Cast the view to an SKView instance
+        guard let skView = self.view as? SKView else {
+            return
         }
+
+        // Create the game scene and set its size to match the view's bounds
+        let scene = GameScene(size: view.bounds.size)
+        
+        // Optionally, set the scale mode to maintain the aspect ratio
+        scene.scaleMode = .aspectFill
+
+        // Present the scene in the SKView
+        skView.presentScene(scene)
+        
+        // Optionally, enable debug options
+        skView.showsFPS = true
+        skView.showsNodeCount = true
+        
+        // Remove or comment out the following line, as `SKView` does not have an `allowsCameraControl` property
+        // skView.allowsCameraControl = true
     }
 
+    // Define autorotation behavior
+    override var shouldAutorotate: Bool {
+        return true
+    }
+
+    // Hide the status bar
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+
+    // Define supported interface orientations
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         if UIDevice.current.userInterfaceIdiom == .phone {
             return .allButUpsideDown
@@ -38,8 +53,5 @@ class GameViewController: UIViewController {
             return .all
         }
     }
-
-    override var prefersStatusBarHidden: Bool {
-        return true
-    }
 }
+
